@@ -174,31 +174,24 @@ export class ProgressCircle extends Component {
             false
           )}
         </Surface>
-        {!indeterminate && showsText ? (
+        {showsText ? (
           <View
             style={{
               position: 'absolute',
-              left: textOffset,
-              top: textOffset,
-              width: textSize,
-              height: textSize,
-              borderRadius: textSize / 2,
+              width: size,
+              height: size,
               alignItems: 'center',
               justifyContent: 'center',
             }}
           >
-            <Text
-              style={[
+            <View
+              style={
                 {
-                  color,
-                  fontSize: textSize / 4.5,
-                  fontWeight: '300',
-                },
-                textStyle,
-              ]}
-            >
-              {formatText(progressValue)}
-            </Text>
+                  backgroundColor: 'white',
+                  width: size / 4,
+                  height: size / 4
+                }}
+            />
           </View>
         ) : (
           false
